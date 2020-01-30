@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bon Voyage</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background-color: black;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .cover{
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            overflow:hidden;
+            background-size: cover;
+            animation: slide 10s infinite;
+        }
+
+        a{
+            transition: all 0.5s linear;
+        }
+
+        .navbar{
+            background-color: black;
+            height:80px;
+            background:none;
+            width:100%;
+            padding: 0;
+        }
+
+        .navbar-brand{
+            font-family:monospace;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        .nav-link{
+            margin:30px 20px;
+            font-size: 20px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            transition: 0.5s;
+            color: white;
+        }
+
+        #signUp{
+            color: white;
+            background: none;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 1000px;
+            border-color: wheat;
+            transition: 0.75s;
+            margin: 20px 10px;;
+            padding: 10px 30px;
+        }
+
+        #signUp:hover{
+            background-color: white;
+            color:black;   
+            transition: 0.5s;  
+        }
+
+        .jumbotron{
+            background:none;
+            height:720px;
+            border-radius: 0;
+            color:"white";
+            padding: 280px 200px;
+            opacity:1;
+            margin:0;
+        }
+
+        .jumbotron2{
+            background:none;
+            height:720px;
+            border-radius: 0;
+            color:"white";
+            padding: 180px 151px;
+            opacity:1;
+            margin:0;
+        }
+
+        #navbarTogglerDemo02{
+            background-color: rgba(0, 0, 0, 0.856);
+            height: 80px;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255,255,255);
+        }
+
+        p{
+            color:rgb(255, 255, 255);
+            -webkit-text-stroke: 1px rgb(0, 0, 0);
+            font-size: 20px;
+            animation: fade 10s infinite;
+
+        }
+
+        .display-4{
+            color:rgb(0, 0, 0);
+            -webkit-text-stroke: 0.5px white;
+            margin:0px;
+        }
+
+        .display-3{
+            opacity:1;
+            color: #007BFF;
+        }
+
+        .display-5{
+            font-size:25px;
+            padding: 30px;
+        }
+
+        .desc{
+            color: white;
+        }
+
+        .navbar-toggler{
+            margin: 20px;
+        }
+
+
+        #about{
+
+        }
+
+        .btn{
+            border-radius:1000px;
+            padding:15px;
+            float: right;
+            width: 300px;
+            margin: 40px 20px;
+        }
+
+        .btn-primary{
+            margin:0px;
+            padding:10px;
+        }
+
+        .input{
+            margin:12px;
+        }
+
+        input, textarea{
+            width:400px;
+        }
+
+        textarea{
+            height: 150px;
+        }
+
+
+        #hotels{
+            background-color: white;
+        }
+        
+        #cars{
+            background-color: #007BFF;
+        }
+        
+        #packages{
+            background-color: white;
+        }
+
+        .city-left{
+            display: block;
+            height:50%;
+            width: 45%;
+            background-color: rgba(156, 156, 156, 0.856);
+            margin: 1%;
+            float: left;
+        }
+
+        .city-right{
+            height:50%;
+            width: 45%;
+            background-color: rgba(156, 156, 156, 0.856);
+            margin: 1%;
+            float: right;
+        }
+        
+
+        @media screen and (max-width: 941px){
+            .jumbotron{
+                padding:230px 40px;
+                height:630px;
+            }
+
+            #navbarTogglerDemo02{
+                height:auto;
+                padding: 20px;
+            }
+
+            input{
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 772px){
+            .jumbotron{
+                padding:160px 20px;
+            }
+
+            .jumbotron2{
+                height:625px;
+                padding:80px 8%;
+            }
+
+            .display-2{
+                font-size:75px;
+            }
+            .display-3{
+                font-size:75px;
+            }
+
+            .btn{
+                margin: 8px  11%;
+                padding: 8px;
+                width: 80%;
+            }
+
+            input{
+                width:90%;
+            }
+
+            textarea{
+                width:90%;
+            }
+
+            .input{
+                margin-left:10%             
+            }
+
+            .city-left, .city-right{
+                height: 40%;
+            }
+
+            .navbar-dark{
+                background-color: rgb(0, 0, 0);
+            }
+            .navbar-brand{
+                background-color: white;
+                padding-top: 15px;
+                height:80px;
+            }
+            .navbar-dark .navbar-brand {
+                color: #007BFF;
+            }
+            
+
+        @media screen and (max-width: 563px){
+            .city-left, .city-right{
+                width:100%;
+                margin:0;
+                margin-bottom:2px;
+            }
+            #packages{
+                height: 950px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+        
+
+        }
+        @media screen and (max-width: 356px){
+            .jumbotron{
+                height: 630px;
+                padding:110px 25px;
+            }
+
+            .display-2{
+                font-size:65px;
+            }
+            .display-3{
+                font-size:60px;
+            }
+        }
+
+        @media screen and (max-width: 320px){
+            .jumbotron{
+                height:630px;
+                padding:110px 25px;
+            }
+
+            .display-2{
+                font-size:60px;
+            }
+            .display-3{
+                font-size:60px;
+            }
+        }
+
+        @keyframes slide{
+            0%{
+                background-image: url(image2_.jpg);
+            }
+            33%{
+                background-image: url(image3_.jpeg);
+            }
+            67%{
+                background-image: url(image1_.jpg);
+            }
+            100%{
+                background-image: url(image2_.jpg);
+            }
+
+        }
+
+        @keyframes fade{
+            33%{
+                color: black;
+
+            }
+            67%{
+                color: white;
+            }
+            100%{
+                color: white;
+            }
+
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cover">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+            <a class="navbar-brand" href="#">voyager</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#hotels">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cars">Cars</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#flights">Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#packages">Packages</a>
+                </li>
+            </ul>
+            <button id="signUp">Signup</button>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1 class="display-4">THE VACATION VIBES...</h1>
+            <p class="lead">TRAVEL THE WORLD WITH US.</p>
+            <hr class="my-4">
+            <p>HERE WE PROVIDE THE BEST TRAVEL PLANS TO VARIOUS PART OF THE WORLD.TO MAKE THE WORLD A SMALL PLACE AND TO MAKE YOUR TRAVEL EASY AND COMFORTABLE WE ARE HERE.</p>
+            <a class="btn-primary btn-lg" href="#about"><i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div id="about">
+        <div class="jumbotron">
+            <h1 class="display-3">About Us</h1>
+            <hr class="my-4">
+            <p class="desc">
+                SO WE ARE ONE OF THE OLDEST WORKING NETWORK.WE STARTED IN 2019 AND WE ARE CONTINUING ARE WORK FURTHER MORE. WE HAVE A WELL RECOGNISED STAFF WORKING FOR GIVING A PERSONAL TOUCH TO OUR CUSTOMERS.YOU CAN CONTACT US ANYTIME AND MAKE YOUR OWN PACKAGES IN THE CHEAPEST PRICES AVAILABLE.
+            </p>
+        </div>
+    </div>
+    <div id="hotels">
+        <div class="jumbotron2">
+            <h2 class="display-2"><i class="fa fa-building"> </i> Hotels</h2>
+            <h4 class="display-5">
+                <div class="input">CHECK IN&nbsp;&nbsp;&nbsp;&nbsp;: <input type="date" name="in-date" ></div>
+                <div class="input">CHECK OUT&nbsp;: <input type="date" name="out-date"></div>
+                <div class="input">WHERE TO&nbsp;&nbsp;&nbsp;: <input type="text" name="city"></div>
+                <div class="input">ROOMS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="number" name="numberofrooms" min="1" max="8"></div>
+               <input type="button" class="btn btn-dark" value="Submit">
+           </h4>
+        </div>
+    </div>
+    <div id="cars">
+        <div class="jumbotron2">
+            <h2 class="display-2"><i class="fa fa-car"> </i> Cars</h2>
+            <h4 class="display-5">
+                <div class="input">DATE AND TIME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="datetime" name="DATE"></div>
+                <div class="input">PICK UP LOCATION : <input type="PICK UP" name="PICK UP"></div>
+                <div class="input">DROP LOCATION &nbsp;&nbsp;&nbsp;&nbsp;: <input type="PROVIDE" name="drop"></div>
+               <input type="button" class="btn btn-light" value="Submit">
+           </h4>
+        </div>
+    </div>
+    <div id="flights">
+        <div class="jumbotron2">
+            <h2 class="display-2"><i class="fa fa-plane"> </i> Flights</h2>
+            <h4 class="display-5">
+                <div class="input">DATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="date" name="DATE"></div>
+                <div class="input">DEPARTURE :  <input type="text" name="departure"></div>
+                <div class="input">ARRIVAL&nbsp;&nbsp;&nbsp;&nbsp;      &nbsp;:  <input type="text" name="arrival"></div>
+                <div class="input">ADULT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  <input type="number" name="adults" min="1" max="6"></div>
+               <input type="button" class="btn btn-light" value="Submit">
+              </h4>
+        </div>
+    </div>
+    <div id="packages">
+        <div class="jumbotron2">
+            <h2 class="display-2">Packages</h2>
+            <div class="city-left">
+                <h3>
+                    Delhi
+                </h3>
+            </div>
+            <div class="city-right">
+                <h3>
+                    Mumbai
+                </h3>
+            </div>
+             <div class="city-left">
+                <h3>
+                    New York
+                </h3>  
+             </div>
+             <div class="city-right">
+                <h3>
+                    Vellore
+                </h3>
+             </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="jumbotron2">
+            <h2 class="display-3">Contact Us</h2>
+            <h4 class="display-5">
+                <div class="input"><input type="text" id="fname" name="firstname" placeholder="First name"></div>
+                <div class="input"><input type="text" id="lname" name="lastname" placeholder="Last name"></div>
+                <div class="input"><input type="text" id="email" name="email" placeholder="Email"></div>
+                <div class="input"><textarea id="message" name="message" placeholder="Message"></textarea></div>
+                <input type="button" class="btn btn-primary" value="Submit">
+            </h4 class="display-5">
+        </div>
+    </div>
+    <script>
+        var nav=document.querySelector(".navbar");
+        var navico=document.querySelector(".navbar-toggler")
+        var signUp=document.getElementById("signUp");
+        var about=document.querySelector(".about");
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var jumbotron=document.querySelector(".jumbotron");
+            var scrolled = (winScroll / height) * 100;
+            var fade=1-winScroll/250;
+            jumbotron.style.opacity=fade;
+            if(scrolled>25){
+                about.style.opacity=fade;
+            }
+            if(scrolled<35){
+                about.style.opacity=1-fade;
+            }
+            /*if(scrolled>=30){
+                nav.classList.add("navbar-dark bg-light");
+                signUp.style.backgroundColor="#007BFF";
+            }
+            if(scrolled<15){
+                document.querySelector(".navbar").style.backgroundColor="none";
+            }*/
+        }
+    </script>
+
+</body>
+</html>
