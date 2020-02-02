@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Bon Voyage</title>
     <style>
@@ -26,10 +27,6 @@
             animation: slide 10s infinite;
         }
 
-        a{
-            transition: all 0.5s linear;
-        }
-
         .navbar{
             background-color: black;
             height:80px;
@@ -42,7 +39,14 @@
             font-family:monospace;
             font-size: 30px;
             padding: 10px;
+            transition: all 0.5s linear;
+
         }
+
+        .navbar-logo:hover{ 
+            text-decoration: none;
+
+            }
 
         .nav-link{
             margin:30px 20px;
@@ -72,7 +76,7 @@
 
         .jumbotron{
             background:none;
-            height:720px;
+            height:100vh;
             border-radius: 0;
             color:"white";
             padding: 280px 200px;
@@ -82,7 +86,7 @@
 
         .jumbotron2{
             background:none;
-            height:720px;
+            height:100vh;
             border-radius: 0;
             color:"white";
             padding: 180px 151px;
@@ -103,8 +107,10 @@
             color:rgb(255, 255, 255);
             -webkit-text-stroke: 1px rgb(0, 0, 0);
             font-size: 20px;
-            animation: fade 10s infinite;
+        }
 
+        .sub-head{
+            animation: fade 10s infinite;
         }
 
         .display-4{
@@ -143,9 +149,6 @@
             color:#007BFF;
         }
 
-        #about{
-
-        }
 
         .btn{
             border-radius:1000px;
@@ -172,6 +175,9 @@
             height: 150px;
         }
 
+        #flights{
+            color:rgb(255, 255, 255);
+        }
 
         #hotels{
             background-color: white;
@@ -182,7 +188,8 @@
         }
         
         #packages{
-            background-color: white;
+            background-color: #007bff;
+            color: white;
         }
 
         .city-left{
@@ -192,6 +199,7 @@
             background-color: rgba(156, 156, 156, 0.856);
             margin: 1%;
             float: left;
+            text-align: center;
         }
 
         .city-right{
@@ -200,13 +208,35 @@
             background-color: rgba(156, 156, 156, 0.856);
             margin: 1%;
             float: right;
+            text-align: center;
+
+        }
+
+        .delhi{
+            background-image: url("delhi.jpg");
+            background-position: center;
+        }
+
+        .mumbai{
+            background-image: url("mumbai.jpg");
+            background-position: center;
+        }
+
+        .newyork{                       
+            background-image: url("ny.jpg");
+            background-position: center;
+        }
+
+        .goa{
+            background-image: url("goa.jpg");
+            background-position: center;
+
         }
         
 
         @media screen and (max-width: 941px){
             .jumbotron{
                 padding:230px 40px;
-                height:630px;
             }
 
             #navbarTogglerDemo02{
@@ -225,8 +255,7 @@
             }
 
             .jumbotron2{
-                height:625px;
-                padding:80px 8%;
+                padding:18% 8%;
             }
 
             .display-2{
@@ -266,6 +295,7 @@
                 padding-top: 15px;
                 height:80px;
             }
+
             .navbar-dark .navbar-logo {
                 color: #007BFF;
             }
@@ -278,7 +308,7 @@
                 margin-bottom:2px;
             }
             #packages{
-                height: 950px;
+                height: 170vh;
             }
             p{
                 font-size: 18px;
@@ -289,7 +319,6 @@
         }
         @media screen and (max-width: 356px){
             .jumbotron{
-                height: 630px;
                 padding:110px 25px;
             }
 
@@ -303,7 +332,6 @@
 
         @media screen and (max-width: 320px){
             .jumbotron{
-                height:630px;
                 padding:110px 25px;
             }
 
@@ -380,7 +408,7 @@
             <h1 class="display-4">THE VACATION VIBES...</h1>
             <p class="lead">TRAVEL THE WORLD WITH US.</p>
             <hr class="my-4">
-            <p>HERE WE PROVIDE THE BEST TRAVEL PLANS TO VARIOUS PART OF THE WORLD.TO MAKE THE WORLD A SMALL PLACE AND TO MAKE YOUR TRAVEL EASY AND COMFORTABLE WE ARE HERE.</p>
+            <p class="sub-head">HERE WE PROVIDE THE BEST TRAVEL PLANS TO VARIOUS PART OF THE WORLD.TO MAKE THE WORLD A SMALL PLACE AND TO MAKE YOUR TRAVEL EASY AND COMFORTABLE WE ARE HERE.</p>
             <a class="btn-primary btn-lg" href="#about"><i class="fa fa-chevron-right"></i></a>
         </div>
     </div>
@@ -397,10 +425,10 @@
         <div class="jumbotron2">
             <h2 class="display-2"><i class="fa fa-building"> </i> Hotels</h2>
             <h4 class="display-5">
-                <div class="input">CHECK IN&nbsp;&nbsp;&nbsp;&nbsp;: <input type="date" name="in-date" ></div>
-                <div class="input">CHECK OUT&nbsp;: <input type="date" name="out-date"></div>
-                <div class="input">WHERE TO&nbsp;&nbsp;&nbsp;: <input type="text" name="city"></div>
-                <div class="input">ROOMS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="number" name="numberofrooms" min="1" max="8"></div>
+                <div class="input">CHECK IN: <input type="date" name="in-date" ></div>
+                <div class="input">CHECK OUT: <input type="date" name="out-date"></div>
+                <div class="input">WHERE TO: <input type="text" name="city"></div>
+                <div class="input">ROOMS: <input type="number" name="numberofrooms" min="1" max="8"></div>
                <input type="button" class="btn btn-dark" value="Submit">
            </h4>
         </div>
@@ -409,9 +437,10 @@
         <div class="jumbotron2">
             <h2 class="display-2"><i class="fa fa-car"> </i> Cars</h2>
             <h4 class="display-5">
-                <div class="input">DATE AND TIME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="datetime" name="DATE"></div>
+                <div class="input">DATE: <input type="date" name="DATE" min="2020-02-01"></div>
+                <div class="input">TIME: <input type="time" name="TIME"></div>
                 <div class="input">PICK UP LOCATION : <input type="PICK UP" name="PICK UP"></div>
-                <div class="input">DROP LOCATION &nbsp;&nbsp;&nbsp;&nbsp;: <input type="PROVIDE" name="drop"></div>
+                <div class="input">DROP LOCATION: <input type="PROVIDE" name="drop"></div>
                <input type="button" class="btn btn-light" value="Submit">
            </h4>
         </div>
@@ -420,10 +449,10 @@
         <div class="jumbotron2">
             <h2 class="display-2"><i class="fa fa-plane"> </i> Flights</h2>
             <h4 class="display-5">
-                <div class="input">DATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="date" name="DATE"></div>
+                <div class="input">DATE: <input type="date" name="DATE" min="2020-02-02"></div>
                 <div class="input">DEPARTURE :  <input type="text" name="departure"></div>
-                <div class="input">ARRIVAL&nbsp;&nbsp;&nbsp;&nbsp;      &nbsp;:  <input type="text" name="arrival"></div>
-                <div class="input">ADULT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  <input type="number" name="adults" min="1" max="6"></div>
+                <div class="input">ARRIVAL:  <input type="text" name="arrival"></div>
+                <div class="input">ADULT:  <input type="number" name="adults" min="1" max="6"></div>
                <input type="button" class="btn btn-light" value="Submit">
               </h4>
         </div>
@@ -431,24 +460,24 @@
     <div id="packages">
         <div class="jumbotron2">
             <h2 class="display-2">Packages</h2>
-            <div class="city-left">
+            <div class="city-left delhi">
                 <h3>
                     Delhi
                 </h3>
             </div>
-            <div class="city-right">
+            <div class="city-right mumbai">
                 <h3>
                     Mumbai
                 </h3>
             </div>
-             <div class="city-left">
+             <div class="city-left newyork">
                 <h3>
                     New York
                 </h3>  
              </div>
-             <div class="city-right">
+             <div class="city-right goa">
                 <h3>
-                    Vellore
+                    Goa
                 </h3>
              </div>
         </div>
@@ -483,16 +512,25 @@
                         $(".navbar-logo").addClass("white");
                         $(".navbar-logo").removeClass("blue");
                     } 
-                    if($(window).scrollTop() > 1400 || $(window).scrollTop() > 3600) {
+                    if($(window).scrollTop() > 1400) {
                         $(".navbar-logo").addClass("blue");
                         $(".navbar-logo").removeClass("white");
                     }
-                    if($(window).scrollTop() > 2085) {
+                    if($(window).scrollTop() > 2100) {
                         $(".navbar-logo").addClass("white");
                         $(".navbar-logo").removeClass("blue");
                     }
+                    if($(window).scrollTop() > 2100) {
+                        $(".navbar-logo").addClass("white");
+                        $(".navbar-logo").removeClass("blue");
+                    }
+                    if($(window).scrollTop() > 4300) {
+                        $(".navbar-logo").addClass("blue");
+                        $(".navbar-logo").removeClass("white");
+                    }
                 });
             });
+            
             /*if(scrolled>=30){
                 nav.classList.add("navbar-dark bg-light");
                 signUp.style.backgroundColor="#007BFF";
