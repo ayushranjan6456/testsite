@@ -38,7 +38,7 @@
             padding: 0;
         }
 
-        .navbar-brand{
+        .navbar-logo{
             font-family:monospace;
             font-size: 30px;
             padding: 10px;
@@ -131,6 +131,17 @@
             margin: 20px;
         }
 
+        .white{
+            color:white;
+        }
+
+        .black{
+            color:black;
+        }
+
+        .blue{
+            color:#007BFF;
+        }
 
         #about{
 
@@ -250,12 +261,12 @@
             .navbar-dark{
                 background-color: rgb(0, 0, 0);
             }
-            .navbar-brand{
+            .navbar-logo{
                 background-color: white;
                 padding-top: 15px;
                 height:80px;
             }
-            .navbar-dark .navbar-brand {
+            .navbar-dark .navbar-logo {
                 color: #007BFF;
             }
             
@@ -274,7 +285,7 @@
             }
         }
         
-
+        
         }
         @media screen and (max-width: 356px){
             .jumbotron{
@@ -342,7 +353,7 @@
 <body>
     <div class="cover">
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-            <a class="navbar-brand" href="#">voyager</a>
+            <a class="navbar-logo white" href="#">voyager</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -466,12 +477,22 @@
             var scrolled = (winScroll / height) * 100;
             var fade=1-winScroll/250;
             jumbotron.style.opacity=fade;
-            if(scrolled>25){
-                about.style.opacity=fade;
-            }
-            if(scrolled<35){
-                about.style.opacity=1-fade;
-            }
+            $(function() {
+                    $(window).on("scroll", function() {
+                    if($(window).scrollTop() < 1400) {
+                        $(".navbar-logo").addClass("white");
+                        $(".navbar-logo").removeClass("blue");
+                    } 
+                    if($(window).scrollTop() > 1400 || $(window).scrollTop() > 3600) {
+                        $(".navbar-logo").addClass("blue");
+                        $(".navbar-logo").removeClass("white");
+                    }
+                    if($(window).scrollTop() > 2085) {
+                        $(".navbar-logo").addClass("white");
+                        $(".navbar-logo").removeClass("blue");
+                    }
+                });
+            });
             /*if(scrolled>=30){
                 nav.classList.add("navbar-dark bg-light");
                 signUp.style.backgroundColor="#007BFF";
